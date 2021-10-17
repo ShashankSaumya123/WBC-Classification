@@ -75,23 +75,84 @@
             <ul>
                 <li>Refinement and preparing the dataset : Shashank (Image to data squeezing, reshaping), Girish (Finding the Optimal way to work with the data)</li>
                 <li>Planning and coding the model :- Girish + Shashank</li>                
-                <li>Report Writing, presentation and Website maintainance : Girish + shashank</li>
+                <li>Report Writing, presentation and Website maintainance : Girish</li>
+            </ul>
+
+            <hr />
+
+            <h1>Midway Works :</h1> 
+            <p>
+                Up till now we have done the following:
+            </p>
+            
+            <ul>
+                <li>Learnt about the theory behind NN and CNN</li>
+                <li>Read the relevant papers</li>
+                <li>Done some experimentation of various dataset including ours</li>
+            </ul>  
+            
+            <hr />
+             <h2>Some Analysis of the papers</h2>
+             <ul>
+                 <li>Important points and analysis on Paper 1: WBC Classification using CNN, Mayank sharma, Aishwarya Bhave and Rekh Ram Jaghel
+                    <ul>
+                        <li>Use the same WBC data (with some augmentation and downsizing)</li>
+                        <li>Use a 7 layered (LeNet) CNN model</li>
+                        <li>Tried for different epochs and Learning rates</li>
+                        <li>Best results at 20 epochs and 0.001 Learning rate (0.8793 Accuracy)</li>
+                    </ul>
+                 </li>
+                    
+                 <li>
+                    Important points and analysis on Paper 2: Counting and Classification of WBC using ANN, Shubham Manik, lalit Mohan Saini and Nikhil Vadera
+                    <ul>
+                        <li>They have the image of a slide which contains multiple WBCs</li>
+                        <li>Used Image Segmentation Techniques likes Cell and Nucleus Segmentation</li>
+                        <li>Morphological features are extracted like, Cell area, nucleus area, area ratio, number of lobules in nucleus, etc</li>
+                        <li>Use NN to perform multiclass Classification</li>
+                        <li>However, they only had 90 leukocyte (WBC) samples which is very small data</li>
+                        <li>The accuracy was around 98.9%</li>
+                    </ul>
+                     
+                 </li>
+             </ul>
+
+            <hr />
+
+            <h3>Various experiments we have done. <a href="https://github.com/Girish0409/21cs460_group12/tree/main/Code%20and%20Data">Link </a>to the codes</h3>
+            <ul>
+                <li>Mnist database : NN Single layered : Adam Optimiser : Sigmoid Activation : 92.80 % testing accuracy</li>
+                <li>Mnist database : NN Multi-layered : Adam Optimiser : Sigmoid Activation : 98.04 % testing accuracy </li>
+                <li>Cifar10 database : NN Multilayered : SGD Optimiser : Sigmoid Activation : 55.33 % testing accuracy</li>
+                <li>Cifar10 database : NN Multilayered : Adam Optimiser : Softmax Activation : 48 % testing accuracy</li>
+                <li>Cifar10 database : NN Multilayered : SGD Optimiser : one hot encoding + softmax activation : 56% testing accuracy</li>
+                <li>Cifar10 database : CNN Multilayered (2 Convolution layers) : Adam optimiser : Softmax Activation : Accuracy Training = 93 %, Testing = 68%</li>
+                <li>WBC database : CNN multilayered (2 Convolution Layers) : Adam optimiser : Softmax activation : Accuracy training = 100 %, testing = 48%</li>
+
+            </ul>
+            <hr />
+
+            <h3>Future ideas and comments on the current experiments</h3>
+            <ul>
+                <li>Understand LeNet and if possible come up with a better model/layer combination</li>
+                <li>Our CNN model is getting overfitted on the databases. This maybe due lack of data augmentation. To tackle that, we are thinking to do the following
+                    <ul>
+                        <li>Use data augmentation, resizing etc.</li>
+                        <li>Use image segmentation method to separate the nucleus from the image, and train the model on that</li>
+                        <li>Use GridSearchCV for tuning of hyperparameters</li>
+                    </ul>
+                </li>
             </ul>
 
             <hr />
             
-            <h2>Expected Results:</h2>
-            <ul>
-                <li>A model that predicts the type of WBC from its image</li>
-                <li>Have enough accuracy so that it can be reliably used</li>
-            </ul>
-            
-            
             <h2>Relevant Paper and Sources:</h2>
             <ul>
+                <li>Sharma M., Bhave A., Janghel R.R. (2019) White Blood Cell Classification Using Convolutional Neural Network. In: Wang J., Reddy G., Prasad V., Reddy V. (eds) Soft Computing and Signal Processing. Advances in Intelligent Systems and Computing, vol 900. Springer, Singapore. https://doi.org/10.1007/978-981-13-3600-3_13. <a href="https://link.springer.com/chapter/10.1007/978-981-13-3600-3_13"> Link</a></li>
+                <li>S. Manik, L. M. Saini and N. Vadera, "Counting and classification of white blood cell using Artificial Neural Network (ANN)," 2016 IEEE 1st International Conference on Power Electronics, Intelligent Control and Energy Systems (ICPEICES), 2016, pp. 1-5, doi: 10.1109/ICPEICES.2016.7853644. <a href="https://ieeexplore.ieee.org/abstract/document/7853644"> Link</a></li>
                 <li>Image recognition using convolutional neural network combined with ensemble learning algorithm, Weilong Mo et al 2019 J. Phys.: Conf. Ser. 1237 022026 <a href="https://www.researchgate.net/publication/334426609_Image_recognition_using_convolutional_neural_network_combined_with_ensemble_learning_algorithm">Link</a></li>
-                <li>Q. Li, W. Cai, X. Wang, Y. Zhou, D. D. Feng and M. Chen, "Medical image classification with convolutional neural network," 2014 13th International Conference on Control Automation Robotics & Vision (ICARCV), 2014, pp. 844-848, doi: 10.1109/ICARCV.2014.7064414.<a href="https://ieeexplore.ieee.org/document/7064414">Link</a></li>
-                <li>Jiaohua Qin, Wenyan Pan, Xuyu Xiang, Yun Tan, Guimin Hou, A biological image classification method based on improved CNN, Ecological Informatics, Volume 58, 2020, 101093, ISSN 1574-9541, https://doi.org/10.1016/j.ecoinf.2020.101093<a href="https://www.sciencedirect.com/science/article/abs/pii/S1574954120300431">Link</a></li>
+                <li>Q. Li, W. Cai, X. Wang, Y. Zhou, D. D. Feng and M. Chen, "Medical image classification with convolutional neural network," 2014 13th International Conference on Control Automation Robotics & Vision (ICARCV), 2014, pp. 844-848, doi: 10.1109/ICARCV.2014.7064414. <a href="https://ieeexplore.ieee.org/document/7064414">Link</a></li>
+                <li>Jiaohua Qin, Wenyan Pan, Xuyu Xiang, Yun Tan, Guimin Hou, A biological image classification method based on improved CNN, Ecological Informatics, Volume 58, 2020, 101093, ISSN 1574-9541, https://doi.org/10.1016/j.ecoinf.2020.101093. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1574954120300431">Link</a></li>
             </ul>
 
         </div>
