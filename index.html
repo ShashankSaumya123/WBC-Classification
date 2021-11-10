@@ -145,6 +145,33 @@
             </ul>
 
             <hr />
+            <h1>Final Works</h1>
+            <p>
+                Till now we are able to do the following:
+                <ul>
+                    <li>Generated data from image augmentation, but could not train our model on the same due to Out of memory errors.</li>
+                    <li>Did image segmentation techniques to extract the nucleus from the image</li>
+                    <li>Tried out regularisation techniques to tackle overfitting</li>
+                    <li>Tried out GridSearchCV for hyperparameters</li>
+                </ul>
+            </p>
+            <hr />
+            <h2>Experimentals and different models : <a href="https://github.com/Girish0409/21cs460_group12/tree/main/Code%20and%20Data/Post%20Midway"> Link </a> to the codes </h2>
+            <ul>
+                <li>Model 1 (Base - old model) : Multilayers CNN : Adam optimiser : one hot encoding : Train acc = 99.97 % : Testing acc = 27.51% -> This model is getting overfitted</li>
+                <li>Model 2 (Model 1 + Image segmentation) : Multilayered CNN : Training acc = 98% : Testing acc = 70 -> Better performance can be seen</li>
+                <li>Model 3 (Model 2 + Dropout Regularisation) : Multilayered CNN : Training acc = 83% : Testing acc = 74% -> Regulation did made our model better </li>
+                <li>Model 4 (Using better image segmentation, image segmentation minus stray patches) : Multilayered CNN : Training acc = 98.74% : Testing acc = 72%</li>
+                <li>Model 5 (Image segmentation plus Dropout layer) : Multilayered CNN : Training Acc = 89.67% : Testing acc = 77.94% -> Best Model Till now</li>
+            </ul>
+            <hr />
+            <h3>Problems so far and possible fixes</h3>
+            <ul>
+                <li>No augmentation, can be solved by doing batchwise training of model on the augmented images</li>
+                <li>Not clear image even after image segmentation, image needs to be cropped</li>
+                <li>Model getting confused in Class 1 (Eosinophil) and class 4 (Nutrophil). Maybe due to similar structure of nucleus</li>
+            </ul>
+            <hr />
             
             <h2>Relevant Paper and Sources:</h2>
             <ul>
