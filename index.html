@@ -36,10 +36,49 @@
             </p>
             <hr />
 
-            <h2>Title of the project : <br>
+            <h1>Title of the project : <br>
                 Multiclass classification of White blood cells using Convolutional Neural Network (CNN)<br>
                 
-            </h2>
+            </h1>
+            <hr />
+
+            <h3>Biological Background of the project</h3>
+            <p>
+                WBCs (White Blood cells) also known as leukocytes are the cells of immune system that are involved in protecting the body against both
+                infectious invadors and foreign diseases. <br>
+                Depending upon the presence of small structures known as granules, WBCs are classified into two different types:
+                <ul>
+                    <li>Granulocytes: Presence of Granular cytoplasm</li>
+                    <li>Agranulocytes: Absence of Granular cytoplasm</li>
+                </ul>
+                Depending upon the type of nuclus, Granulocytes and Agranulocytes are furthur divided into different types <br>
+                <br>
+                Granulocytes:
+                <ul> 
+                    <li>Basophil: About 0.4% in adults. Responsible for allergic and antigen response by releasing a chemical called histamine. Since they are rarest of the EBC and share similarities between other types of cell, they are difficult to study, hence we dont have any data of the same</li>
+                    <li>Eosinophil: About 2.3% in adults. Can be distinguished as Bi-lobed nucleus. It rises in responce to allergies, parasitic infections and disease of the spleen and central nervous systems. <br>
+                        <centre><img src="eo.png" alt="Eosinophil"></centre>
+                    </li>
+                    <li>
+                        Neutrophil: About 60-70% in adults. Can be distinguished as Multilobed nucleus. Responsible for protection against bacterial or fungal infections.<br> 
+                        <centre><img src="nu.png" alt="Neutrophil"></centre> 
+                    </li>
+                    
+                </ul>
+                <br>
+                Agranulocytes:
+                <ul>
+                    <li>
+                        Monocyte: About 5.3% in adults. Can be distinguished as the largest nucleus. Responsible for phagocytoses of used up neutrophils.<br>
+                        <centre><img src="mono.png" alt="Monocyte"></centre>
+                    </li>
+                    <li>
+                        Lymphocyte: ABout 30% in adults. <br>
+                        <centre><img src="lym.png" alt="Lymphocyte"></centre>
+                    </li>
+                </ul>
+
+            </p>
 
             <h3>
                 Motivation and plans :
@@ -53,10 +92,15 @@
             <p>
                 We plan to first get the RGB info on each pixel of the image. The stained cells are of a different colour from the other cells so it would be easier to identify the pixels which contain the WBC under inspection.
                 Then we will use a CNN and train it to get a model which will be able to classify an image containing a stained WBC.
-                <br>
-                The dataset we will using is <a href="https://www.kaggle.com/paultimothymooney/blood-cells">WBC Classification dataset</a> uploaded on Kaggle by Paul Mooney.
-                
+              
+            </p>
 
+            <h3>KYD : Know Your Dataset</h3>
+            <p>
+                               
+                The dataset we will using is <a href="https://www.kaggle.com/paultimothymooney/blood-cells">WBC Classification dataset</a> uploaded on Kaggle by Paul Mooney. <br>
+                The database consist of about 10,000 images of White blood cells, divided into 4 different classes. Each class have about 2500 RGB images of dimention 320 x 240.  
+                
             </p>
 
             <hr />
@@ -67,7 +111,7 @@
                 <li>Cleaning our data and Preprocessing</li>
                 <li>Have a simple CNN model trained and ready to predict</li>
             </ul>
-            <br> 
+            
             Post midway, we will be exploring methods and layers to make our algorithm and model better in terms of accuracy.
 
             <br>
@@ -81,6 +125,7 @@
             <hr />
 
             <h1>Midway Works :</h1> 
+            <hr />
             <p>
                 Up till now we have done the following:
             </p>
@@ -92,6 +137,31 @@
             </ul>  
             
             <hr />
+             <h2>What is a NN and CNN?</h2>
+             <p>
+                 <img src="nn.png" alt="Neural Network"> <br>
+                 Neural Network (NN) also known as Artificial Neural Network (ANN) as the name suggest is a network of neurons or nodes and forms the basis of Machine Learning and heart of the deep learning algorithms. <br>
+                 It mimics a network of biological neurons. All the different neurons or nodes are connected to each other by weights giving a layer liked structure. A positive weight corresponds to excitory connection and a negative weight corresponds to inhibitory connections. <br>
+                 This weights can be found out or calculated during the traning of the machine learning model. <br>
+                 The first layer of a NN is known as input layer, the last layer is known as output layer. The layers in between both, is known as hidden layer. Number of hidden layers is decided considering the dataset and complexity of the model. <br>
+                 Backpropagation is an important algorithm by which a neural network learns from its own mistakes. <br>
+                 <br>
+                 There are various types of Neural networks like Artificial neural network (ANN), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN), Long short term memory neural network (LSTM) etc. 
+                 Each type of Neural network have its own uses. <br> 
+                 <br>
+                 Neural Network that is frequently used for image classification is Convolutional Neural network (CNN). CNN is a type of NN with another hidden layer known as "convolution layer". <br>
+                 A convolution layer have multiple filters, each filter tried to find a particular pattern. Lets say we are trying to classify an image into birds. A convolution layer will have multiple filters, like a beak filter which detect pattern in beaks of the bird, or a eye filter which detects eye of a bird. These filters or nodes will activate nodes of another convolution layer which might have a head filter or a body filter. When all the required filters or nodes get activated, the output layer will gives us the type of bird we are trying to classify bases on the input of the hidden layers.<br>
+                 <img src="filter.png" alt="Filters"> <br>
+                 <br>
+
+                 We will be using Sequencial method from Keras API in tensorflow library to build our model. We will also be using other functions and method for preprocessing of the image and furthur tweaking of the model 
+
+                 
+
+                
+             </p>
+
+             <hr />
              <h2>Some Analysis of the papers</h2>
              <ul>
                  <li>Important points and analysis on Paper 1: WBC Classification using CNN, Mayank sharma, Aishwarya Bhave and Rekh Ram Jaghel
