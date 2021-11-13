@@ -57,11 +57,11 @@
                 <ul> 
                     <li>Basophil: About 0.4% in adults. Responsible for allergic and antigen response by releasing a chemical called histamine. Since they are rarest of the EBC and share similarities between other types of cell, they are difficult to study, hence we dont have any data of the same</li>
                     <li>Eosinophil: About 2.3% in adults. Can be distinguished as Bi-lobed nucleus. It rises in responce to allergies, parasitic infections and disease of the spleen and central nervous systems. <br>
-                        <centre><img src="eo.png" width="400" height="300" alt="Eosinophil"></centre>
+                        <centre><img src="./images/eo.png" width="400" height="300" alt="Eosinophil"></centre>
                     </li>
                     <li>
                         Neutrophil: About 60-70% in adults. Can be distinguished as Multilobed nucleus. Responsible for protection against bacterial or fungal infections.<br> 
-                        <centre><img src="nu.png" width="400" height="300" alt="Neutrophil"></centre> 
+                        <centre><img src="./images/nu.png" width="400" height="300" alt="Neutrophil"></centre> 
                     </li>
                     
                 </ul>
@@ -70,11 +70,11 @@
                 <ul>
                     <li>
                         Monocyte: About 5.3% in adults. Can be distinguished as the largest nucleus. Responsible for phagocytoses of used up neutrophils.<br>
-                        <centre><img src="mono.png" width="400" height="300" alt="Monocyte"></centre>
+                        <centre><img src="./images/mono.png" width="400" height="300" alt="Monocyte"></centre>
                     </li>
                     <li>
                         Lymphocyte: About 30% in adults. Can be distinguished as eccentric nucleus.<br>
-                        <centre><img src="lym.png" width="400" height="300" alt="Lymphocyte"></centre>
+                        <centre><img src="./images/lym.png" width="400" height="300" alt="Lymphocyte"></centre>
                     </li>
                 </ul>
 
@@ -139,7 +139,7 @@
             <hr />
              <h2>What is a NN and CNN?</h2>
              <p>
-                 <img src="nn.png" alt="Neural Network"> <br>
+                 <img src="./images/nn.png" alt="Neural Network"> <br>
                  Neural Network (NN) also known as Artificial Neural Network (ANN) as the name suggest is a network of neurons or nodes and forms the basis of Machine Learning and heart of the deep learning algorithms. <br>
                  It mimics a network of biological neurons. All the different neurons or nodes are connected to each other by weights giving a layer liked structure. A positive weight corresponds to excitory connection and a negative weight corresponds to inhibitory connections. <br>
                  This weights can be found out or calculated during the traning of the machine learning model. <br>
@@ -151,13 +151,13 @@
                  <br>
                  Neural Network that is frequently used for image classification is Convolutional Neural network (CNN). CNN is a type of NN with another hidden layer known as "convolution layer". <br>
                  A convolution layer have multiple filters, each filter tried to find a particular pattern. Lets say we are trying to classify an image into birds. A convolution layer will have multiple filters, like a beak filter which detect pattern in beaks of the bird, or a eye filter which detects eye of a bird. These filters or nodes will activate nodes of another convolution layer which might have a head filter or a body filter. When all the required filters or nodes get activated, the output layer will gives us the type of bird we are trying to classify bases on the input of the hidden layers.<br>
-                 <img src="filter.png" alt="Filters"> <br>
+                 <img src="./images/filter.png" alt="Filters"> <br>
                  <br>
 
                  We will be using Sequencial method from Keras API in tensorflow library to build our model. We will also be using other functions and method for preprocessing of the image and furthur tweaking of the model. <br> <br>
 
                 The CNN model we have, have different Conv2D layers, pooling layers and Dense layers. Number of each layer is a hyperparameter we can tune and test. Our basic CNN is illustrated by the image below <br>
-                <img src="cnn.png"  alt="Basic CNN Model">
+                <img src="./images/cnn.png"  alt="Basic CNN Model">
 
                  
 
@@ -168,7 +168,7 @@
              <h2>Some Analysis of the papers</h2>
              <hr />
              <h3>Paper 1</h3>
-             <img src="lenet.png" alt="LeNet">
+             <img src="./images/lenet.png" alt="LeNet">
              <ul>
                  <li>Important points and analysis on Paper 1: WBC Classification using CNN, Mayank sharma, Aishwarya Bhave and Rekh Ram Jaghel
                     <ul>
@@ -305,7 +305,7 @@
             <p>
                 Image augmentation is a technique to produce more data from an existing dataset. This helps the model to train on a wider range of Dataset and hence train more efficiently. <br>
                 For the Image augmentation we have used Image Data Generator function from the Keras API in Tensorflow Library. The augmentation parameters are as given below <br>
-                <img src="aug.png" alt="Augmentation function"> <br>
+                <img src="./images/aug.png" alt="Augmentation function"> <br>
                 The function driving this generator, gets the image, turn it into an array, apply the augmentations and saves the image to a given directory using .flow function in the Image Data generator.
             </p>
             <hr />
@@ -316,7 +316,7 @@
                 <li>
                     Cell Segmentation: <br> 
                     The method summary is shown in the figure below. <br>
-                    <img src="cell.png" alt="Cell segmentation"> <br>
+                    <img src="./images/cell.png" alt="Cell segmentation"> <br>
                     We began with taking the grayscale image and apply Adaptive Histogram Equalisation (AHE) on it. AHE is a technique that improves the contrast difference in the image. Then, different thresholding algorithms were tested on it. <br> Thresholding is a technique where once you select a threshold and make all values above it 1 and below it 0. This left us with binary image with black background containing white holes at the postition of the cells.
                     The thresholding algorithms that worked well were otsu isodata and mean thresholding. After that we used erosion for hole filling. Erosion is a technique which removes small black areas within larger white areas. We got good results for images with otsu thresholding only. So, we dropped the other thresholding algorithms. Then, finally using Image opening we were supposed to get rid of all white holes except for the one with WBC.
                     However, we were unable to achieve this. So, instead we went with Nucleus Segmentation.
@@ -326,7 +326,7 @@
                 <li>
                     Nucleus Segmentation: <br>
                     The method summary is show in the figure below. <br>
-                    <img src="nu2.png" alt="Nuclus Segmentation"> <br>
+                    <img src="./images/nu2.png" alt="Nuclus Segmentation"> <br>
                     First the RGB values of image is converted into HSV values where, H = Hue, S = Saturation and V = Value. Then we separate the saturation image and treat it as a separate grayscale image. The reason for this is because the stained nucleus has a considerabely higher saturation value as compared to other regions in the image.
                     Then using a threshold, we were able to separate them. Three different algorithms gave us decent results. They were otsu, isodata and minimum thresholding. However, none of them worked perfectly for every image. So, we compared the results of each thresholding algorithm for random samples from the data and finally settled on otsu thresholding.
                     Now we have a binary image with white nucleus and black background. Then we multiplied its values with the original grayscale image to crop out the region containing the nucleus. 
@@ -338,7 +338,7 @@
                 Apart from augmentation and segmentation another technique used for solving the problem of overfitting is the technique called as Regularisation. <br>
                 There are different types of regularisation known as L1 regularisation, L2 regularisation, Dropout regularisation etc. For CNN models, Dropout regularisation is widely used. <br> <br>
                 <h4>Dropout Regularisation</h4>
-                <img src="drop.png" alt="Dropout Reg"> <br>
+                <img src="./images/drop.png" alt="Dropout Reg"> <br>
                 <p>
                     As the name suggests, dropout regularisation layer "drops out" or ignores a given percentage of nodes in a layer while the training the epoch or it can be said that it temporarily removes those particular nodes from the network. The nodes are randomly selected in each iteration. The dropping percentage is again a hyperparameter that can be tuned, although in many papers it is said that, ideal dropout parameter for a hidden layer is between 0.5 to 0.8.
                 </p>
@@ -363,7 +363,7 @@
                         </tr>
                         </tbody>
                     </table> <br>
-                    <img src="m1.png" height="200" width="500"> <br>
+                    <img src="./images/m1.png" height="200" width="500"> <br>
                     As it can be observed from the confusion matrix, the model is a overfitted one. This model is used as a base model and all the hyperparameter tuning is done on this model                                         
                 </li> <br>
 
@@ -382,7 +382,7 @@
                         </tr>
                         </tbody>
                     </table> <br>
-                    <img src="m2.png" height="200" width="500"> <br>
+                    <img src="./images/m2.png" height="200" width="500"> <br>
                     This model with image segmentation worked a little better than the previous one, so we are on the right direction.
 
                 </li> <br>
@@ -402,7 +402,7 @@
                         </tr>
                         </tbody>
                     </table> <br>
-                    <img src="m3.png" height="200" width="500"> <br>
+                    <img src="./images/m3.png" height="200" width="500"> <br>
                     Adding a dropout regularisation layer made the training accuracy a bit better.
                 </li> <br>
 
@@ -421,7 +421,7 @@
                         </tr>
                         </tbody>
                     </table> <br>
-                    <img src="m4.png" height="200" width="500"> <br>
+                    <img src="./images/m4.png" height="200" width="500"> <br>
                 </li> <br>
 
                 <li>
@@ -439,7 +439,7 @@
                         </tr>
                         </tbody>
                     </table> <br>
-                    <img src="m5.png" height="200" width="500"> <br>
+                    <img src="./images/m5.png" height="200" width="500"> <br>
                     This is by far, the best model we were able to get by hyperparameter tuning.
                 </li>
 
