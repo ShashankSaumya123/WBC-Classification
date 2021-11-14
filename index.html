@@ -168,7 +168,6 @@
              <h2>Some Analysis of the papers</h2>
              <hr />
              <h3>Paper 1</h3>
-             <img src="./images/lenet.png" alt="LeNet">
              <ul>
                  <li>Important points and analysis on Paper 1: WBC Classification using CNN by Mayank sharma, Aishwarya Bhave and Rekh Ram Jaghel
                     <ul>
@@ -372,7 +371,7 @@
                     <table>
                         <tbody>
                         <tr>
-                        <td>&nbsp;Added image segmentation</td>
+                        <td>&nbsp;Added Nucleus segmentation <br> (upto otsu threshold only)</td>
                         <td>CNN Multilayered&nbsp;</td>
                         <td>&nbsp;Adam Optimiser</td>
                         <td>&nbsp;Softmax Activation</td>
@@ -383,7 +382,7 @@
                         </tbody>
                     </table> <br>
                     <img src="./images/m2.png" height="200" width="500"> <br>
-                    This model with image segmentation worked a little better than the previous one, so we are on the right direction.
+                    This model with nucleus segmentation worked a little better than the previous one, so we are on the right direction.
 
                 </li> <br>
 
@@ -411,7 +410,7 @@
                     <table>
                         <tbody>
                         <tr>
-                        <td>&nbsp;Image segmentation 2.0</td>
+                        <td>&nbsp;Image segmentation 2.0 <br> (Complete Nucleus Segmentation)</td>
                         <td>CNN Multilayered&nbsp;</td>
                         <td>&nbsp;Adam Optimiser</td>
                         <td>&nbsp;Softmax Activation</td>
@@ -450,7 +449,7 @@
             <ul>
                 <li>Unable to train on the augmented data, can be solved by doing batchwise training of model on the augmented images.</li>
                 <li>In some images the nucleus segmentation does not work properly.</li>
-                <li>Model is getting confused in Class 1 (Eosinophil) and class 4 (Nutrophil). Probably due to the similar structure of nucleus.</li>
+                <li>Model is getting confused in Class 1 (Eosinophil) and class 4 (Neutrophil). Probably due to the similar structure of nucleus.</li>
             </ul>
             <hr />
             
