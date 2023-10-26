@@ -1,13 +1,13 @@
-# Machine Learning : Group 12  
+# Machine Learning: Group 12  
 
-Course Instructor : Dr. Subhankar Mishra
+Course Instructor: Dr. Subhankar Mishra
 
 * * *
 
 Group Contributors
 ------------------
 
-Group Repository : [Link](https://github.com/ShashankSaumya123/WBC-Classification)
+Group Repository: [Link](https://github.com/ShashankSaumya123/WBC-Classification)
 
 *   Girish Tripathy  
     1811072, School of Physical Sciences, NISER  
@@ -18,77 +18,79 @@ Group Repository : [Link](https://github.com/ShashankSaumya123/WBC-Classificatio
 
 * * *
 
-## Title of the project :  
+## Title of the project:  
 Multiclass classification of White blood cells using Convolutional Neural Network (CNN)  
 
 * * *
 
 ### Biological Background of the project
 
-WBCs (White Blood cells) also known as leukocytes are the cells of immune system that are involved in protecting the body against both infectious invaders and foreign diseases.  
-Depending upon the presence of small structures known as granules, WBCs are classified into two different types:
+WBCs (White Blood cells), also known as leukocytes, are immune system cells that help defend the body from external illnesses as well as infectious intruders.
+WBCs are divided into two categories based on whether or not they include tiny structures called granules:
 
-*   Granulocytes: Presence of Granular cytoplasm
-*   Agranulocytes: Absence of Granular cytoplasm
+*   Granulocytes: Presence of Granular Cytoplasm
+*   Agranulocytes: Absence of Granular Cytoplasm
 
-Depending upon the type of nucleus, Granulocytes and Agranulocytes are furthur divided into different types  
+Depending on the type of nucleus, Granulocytes and Agranulocytes are further divided into different types.
   
 Granulocytes:
 
-*   Basophil: About 0.4% in adults. Responsible for allergic and antigen response by releasing a chemical called histamine. Since they are rarest of the WBC and share similarities between other types of cell, they are difficult to study, hence we dont have any data of the same.
-*   Eosinophil: About 2.3% in adults. Can be distinguished as it has Bi-lobed nucleus. It rises in responce to allergies, parasitic infections and disease of the spleen and central nervous systems.  
+*   Basophil: About 0.4% in adults. Responsible for allergic and antigen responses by releasing a chemical called histamine. Since they are the rarest of the WBCs and share similarities with other types of cells, they are difficult to study. Hence, we don't have enough data on the same.
+*   Eosinophil: About 2.3% in adults. Can be easily distinguished as it has a Bi-lobed nucleus. It rises in response to allergies, parasitic infections, and diseases of the spleen and central nervous systems.  
     ![Eosinophil](./images/eo.png)
-*   Neutrophil: About 60-70% in adults. Can be distinguished as it has Multilobed nucleus. Responsible for protection against bacterial or fungal infections.  
+*   Neutrophil: About 60-70% in adults. Can be easily distinguished as it has a Multilobed nucleus. Responsible for protection against bacterial or fungal infections.  
     ![Neutrophil](./images/nu.png)
 
   
 Agranulocytes:
 
-*   Monocyte: About 5.3% in adults. Can be distinguished as it has the largest nucleus. Responsible for phagocytoses of used up neutrophils.  
+*   Monocyte: About 5.3% in adults. Can be easily distinguished as it has the largest nucleus. Responsible for phagocytosis of used up neutrophils.  
     ![Monocyte](./images/mono.png)
-*   Lymphocyte: About 30% in adults. Can be distinguished as having an eccentric nucleus.  
+*   Lymphocyte: About 30% in adults. Can be easily distinguished as having an eccentric nucleus.  
     ![Lymphocyte](./images/lym.png)
 
-### Motivation and plans :
+### Motivation and plans:
 
-There is a need to quickly identify blood cells at bulk in the medical field. We propose using a CNN to build a machine which can classify the stained cells to the type of WBCs. The reason we use CNN is because it is known for its high accuracy when it comes to image recognition.
+There is a need to quickly identify blood cells in bulk in the medical field. We propose using a CNN to build a machine that can classify the stained cells according to the type of WBCs. The reason we use CNN is because it is known for its high accuracy when it comes to image recognition.
 
-We plan to first get the RGB info on each pixel of the image. The stained cells are of a different colour from the other cells so it would be easier to identify the pixels which contain the WBC under inspection. Then we will use a CNN and train it to get a model which will be able to classify an image containing a stained WBC.
+We plan to first get the RGB info on each pixel of the image. The stained cells are of a different colour from the other cells, so it would be easier to identify the pixels that contain the WBC under inspection. Then we will use a CNN and train it to get a model that will be able to classify an image containing a stained WBC.
 
-### KYD : Know Your Dataset
+### KYD: Know Your Dataset
 
-The dataset we will using is [WBC Classification dataset](https://www.kaggle.com/paultimothymooney/blood-cells) uploaded on Kaggle by Paul Mooney.  
-The database consists of about 10,000 images of White blood cells, divided into 4 different classes. Each class have about 2500 RGB images of dimention 320 x 240.
+The dataset that we will use is [WBC Classification dataset](https://www.kaggle.com/paultimothymooney/blood-cells) uploaded on Kaggle by Paul Mooney.
+The database consists of about 10,000 images of White blood cells, divided into 4 different classes. Each class has about 2500 RGB images of dimension 320 x 240.
 
+* * *
+NOTE: This Project has been broken into two parts, Midway and Final which correspond to the evaluation strategy of the ML course it was part of.
 * * *
 
 ### Midway plans and Work Division :
 
-Our Midway plans are follows
+Our Midway plans are as follows:
 
 *   Learn about neural networks from various sources.
 *   Cleaning our data and Preprocessing.
 *   Have a simple CNN model trained and ready to predict.
 
-Post midway, we will be exploring methods and layers to make our algorithm and model better in terms of accuracy.  
-Work Division :
+Post midway, we will be exploring methods and layers to make our algorithm and model better in terms of accuracy.
+Work Division:
 
-*   Refinement and preparing the dataset : Shashank (Image to data squeezing, reshaping, etc), Girish (Finding the Optimal way to work with the data)
-*   Planning and coding the model :- Girish + Shashank
-*   Report Writing, presentation and [Webpage](https://www.niser.ac.in/~smishra/teach/cs460/2021/project/21cs460_group12/) maintainance : Girish
+*   Refinement and preparation of the dataset: Shashank (Image to data squeezing, reshaping, segmentation, etc.)
+*   Planning and coding the model: Girish + Shashank
+*   Report Writing, presentation and [Webpage](https://www.niser.ac.in/~smishra/teach/cs460/2021/project/21cs460_group12/) maintenance: Girish
 
 * * *
 
-Midway Works :
+Midway Works:
 ==============
 
 * * *
 
-Up till now we have done the following:
+Up until now, we have done the following:
 
 *   Learnt about the theory behind NN and CNN.
 *   Read the relevant papers.
-*   Done some experimentation of various dataset including ours.
+*   Did some experimentation with various datasets, including ours.
 
 * * *
 
