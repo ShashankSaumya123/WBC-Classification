@@ -1,7 +1,4 @@
- Machine Learning : Group 12  
-
-Machine Learning CS460 : Group 12
-=================================
+# Machine Learning : Group 12  
 
 Course Instructor : Dr. Subhankar Mishra
 
@@ -21,7 +18,7 @@ Group Repository : [Link](https://github.com/ShashankSaumya123/WBC-Classificatio
 
 * * *
 
-Title of the project :  
+## Title of the project :  
 Multiclass classification of White blood cells using Convolutional Neural Network (CNN)  
 
 * * *
@@ -78,7 +75,7 @@ Work Division :
 
 *   Refinement and preparing the dataset : Shashank (Image to data squeezing, reshaping, etc), Girish (Finding the Optimal way to work with the data)
 *   Planning and coding the model :- Girish + Shashank
-*   Report Writing, presentation and Website maintainance : Girish
+*   Report Writing, presentation and [Webpage](https://www.niser.ac.in/~smishra/teach/cs460/2021/project/21cs460_group12/) maintainance : Girish
 
 * * *
 
@@ -142,117 +139,15 @@ Some Analysis of the papers
 
 ### Various experiments we have done. [Link](https://github.com/Girish0409/21cs460_group12/tree/main/Code%20and%20Data) to the codes
 
- **Experiment No.**
-
-**Dataset**
-
-**Model** 
-
-**Optimiser** 
-
- **Activation Function**
-
- **Training Accuracy**
-
-**Testing Accuracy**
-
- 1
-
-Mnist
-
- NN Single Layered
-
- Adam
-
- Sigmoid
-
- 98 %
-
- 93 %
-
- 2
-
-Mnist
-
- NN Multi Layered
-
-Adam 
-
- Sigmoid
-
- 99 %
-
- 98%
-
- 3
-
-Cifar10
-
- NN Multi Layered
-
-SGD 
-
-Sigmoid 
-
- 99 %
-
- 55 %
-
- 4
-
-Cifar10
-
- NN Multi Layered
-
-Adam 
-
-Softmax 
-
- 98 %
-
- 48 %
-
- 5
-
-Cifar10
-
- NN Multi Layered
-
- SGD
-
-Softmax 
-
- 98%
-
- 56 %
-
- 6
-
-Cifar10
-
- CNN Multi layered
-
-Adam 
-
-Softmax 
-
- 93 %
-
- 68%
-
- 7
-
-WBC
-
-CNN Multilayered 
-
-Adam 
-
-Softmax 
-
-100 % 
-
- 48%
+|**Experiment No.**|**Dataset**|**Model**|**Optimiser**|**Activation Function**|**Training Accuracy**|**Testing Accuracy**|
+|:----------------:|:---------:|:-------:|:-----------:|:---------------------:|:-------------------:|:------------------:|
+| 1 | Mnist | NN Single Layered | Adam | Sigmoid | 98 % | 93 % |
+| 2 | Mnist | NN Multi Layered | Adam | Sigmoid | 99 % | 98% |
+| 3 | Cifar10 | NN Multi Layered | SGD | Sigmoid | 99 % | 55 % |
+| 4 | Cifar10 | NN Multi Layered | Adam | Softmax | 98 % | 48 % |
+| 5 | Cifar10 | NN Multi Layered | SGD | Softmax | 98% | 56 % |
+| 6 | Cifar10 | CNN Multi layered | Adam | Softmax | 93 % | 68% |
+| 7 | WBC | CNN Multilayered | Adam | Softmax | 100 % | 48% |
 
 * * *
 
@@ -324,93 +219,41 @@ Experimentations and different models : [Link](https://github.com/Girish0409/21c
 
   
 
-*   **Model 1**  
+*   **Model 1:**
+  
+    Base Model,  CNN Multilayered,  Adam Optimiser,  Softmax Activation,  Training : 99.97 %,  Testing : 27.51%
     
-     Base Model
-    
-    CNN Multilayered 
-    
-     Adam Optimiser
-    
-     Softmax Activation
-    
-    Training : 99.97 % 
-    
-    Testing : 27.51%
-    
-      
+  
     ![](./images/m1.png)  
     As it can be observed from the confusion matrix, the model is a overfitted one. This model is used as a base model and all the hyperparameter tuning is done on this model
   
-*   **Model 2**  
+*   **Model 2:**
     
-     Added Nucleus segmentation  
-    (upto otsu threshold only)
-    
-    CNN Multilayered 
-    
-     Adam Optimiser
-    
-     Softmax Activation
-    
-    Training : 98 % 
-    
-    Testing : 70 %
+    Added Nucleus segmentation (upto otsu threshold only), CNN Multilayered, Adam Optimiser, Softmax Activation, Training : 98 %, Testing : 70 %
     
       
     ![](./images/m2.png)  
     This model with nucleus segmentation worked a little better than the previous one, so we are on the right direction.
   
-*   **Model 3**  
+*   **Model 3:**  
     
-     Added a dropout layer
-    
-    CNN Multilayered 
-    
-     Adam Optimiser
-    
-     Softmax Activation
-    
-    Training : 83 % 
-    
-    Testing : 74 %
+     Added a dropout layer, CNN Multilayered, Adam Optimiser, Softmax Activation, Training : 83 %, Testing : 74 %
     
       
     ![](./images/m3.png)  
     Adding a dropout regularisation layer made the training accuracy a bit better.
   
-*   **Model 4**
+*   **Model 4:**
     
-     Image segmentation 2.0  
-    (Complete Nucleus Segmentation)
-    
-    CNN Multilayered 
-    
-     Adam Optimiser
-    
-     Softmax Activation
-    
-    Training : 98.74 % 
-    
-    Testing : 72 %
+     Image segmentation 2.0 (Complete Nucleus Segmentation), CNN Multilayered, Adam Optimiser, Softmax Activation, Training : 98.74 %, Testing : 72 %
     
       
     ![](./images/m4.png)  
     
   
-*   **Model 5**
+*   **Model 5:**
     
-     Image Segmentation 2.0 with dropout layer
-    
-    CNN Multilayered 
-    
-     Adam Optimiser
-    
-     Softmax Activation
-    
-    Training : 89.74 % 
-    
-    Testing : 77 %
+     Image Segmentation 2.0 with dropout layer, CNN Multilayered, Adam Optimiser, Softmax Activation, Training : 89.74 %, Testing : 77 %
     
       
     ![](./images/m5.png)  
